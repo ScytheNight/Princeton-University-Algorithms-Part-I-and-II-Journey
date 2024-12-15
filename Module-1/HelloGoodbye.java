@@ -1,14 +1,14 @@
 public class HelloGoodbye {
     public static void main(String[] args) {
-        if (args.length != 2) {
-            System.out.println("You nmust prodice 2 names <name1> <name2>");
-            return;
-        }
+        Scanner names = new Scanner(System.in);
+        System.out.println("Enter 2 names");
 
-        String name1 = args[0];
-        String name2 = args[1];
+        String name1 = names.nextLine();
+        String name2 = names.nextLine();
 
-        System.out.println("Hello " + name1 + " and " + name2 + ".");
-        System.out.println("Goodbye " + name2 + " and " + name1 + ".");
+        System.out.println("Hello " + name1 + " and " + name2 + ".\n");
+        System.out.println("Goodbye " + name2 + " and " + name1 + ".\n");
+
+        names.close();
     }
 }
